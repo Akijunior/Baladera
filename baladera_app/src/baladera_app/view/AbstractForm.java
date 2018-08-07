@@ -16,5 +16,6 @@ public class AbstractForm extends JFrame{
 
     public AbstractForm() throws HeadlessException {
         this.setTitle("Baladera");
+        this.setResizable(false);
     }
 }
