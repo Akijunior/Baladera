@@ -54,6 +54,11 @@ public class ServerForm extends AbstractForm {
         lblProtocol.setText("Protocolo");
 
         btnTry.setText("Testar");
+        btnTry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,6 +126,11 @@ public class ServerForm extends AbstractForm {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTryActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnTryActionPerformed
 
     /**
      * @param args the command line arguments
