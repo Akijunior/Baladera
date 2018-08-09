@@ -12,14 +12,24 @@ public class BasicTCPClient{
 	  Socket s = new Socket("localhost", 9999);
 	  DataOutputStream dout = new DataOutputStream(s.getOutputStream());
 	  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	  
+		
+	  long timeoutMillis = 0;
+	  long start = System.currentTimeMillis();
+
 	  while(true) {
 		  String so = br.readLine();
 		  dout.writeUTF(so);
 		  if (so.equalsIgnoreCase("exit"))
 			  break;
 	  }
+
 	  s.close();
+
+	  long stop = System.currentTimeMillis();
+
+	  timeoutMillis = stop - start;
+
+	  System.out.println(timeoutMillis);
   }
 }
 
@@ -30,7 +40,7 @@ public class BasicTCPClient{
 //JOptionPane.showMessageDialog
 //(null,"Data recebida do servidor:" + data_atual.toString());
 //entrada.close();
-//System.out.println("Conexão encerrada");
+//System.out.println("Conexï¿½o encerrada");
 //}
 //catch(Exception e) {
 //System.out.println("Erro: " + e.getMessage());

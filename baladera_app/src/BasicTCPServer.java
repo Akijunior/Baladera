@@ -25,8 +25,8 @@ public class BasicTCPServer {
 //ServerSocket servidor = new ServerSocket(12345);
 //System.out.println("Servidor ouvindo a porta 12345");
 //while(true) {
-//  // o método accept() bloqueia a execução até que
-//  // o servidor receba um pedido de conexão
+//  // o mï¿½todo accept() bloqueia a execuï¿½ï¿½o atï¿½ que
+//  // o servidor receba um pedido de conexï¿½o
 //  Socket cliente = servidor.accept();
 //  System.out.println("Cliente conectado: " +
 //  cliente.getInetAddress().getHostAddress());
