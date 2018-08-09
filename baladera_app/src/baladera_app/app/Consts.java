@@ -1,6 +1,11 @@
+package baladera_app.app;
+
+
+import java.io.RandomAccessFile;
+
 class Consts
 {
-    public static final RandomAccessFile fileToSend;
+    public static RandomAccessFile fileToSend;
 
     public Consts(){
         try {

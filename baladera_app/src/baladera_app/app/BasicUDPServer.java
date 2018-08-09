@@ -1,7 +1,8 @@
+package baladera_app.app;
 import java.io.*;
 import java.net.*;
 
-class BasicUDPServer
+public class BasicUDPServer
 {
     public static void main(String args[]) throws Exception
     {
@@ -18,6 +19,7 @@ class BasicUDPServer
             int port = receivePacket.getPort();
             String capitalizedSentence = sentence.toUpperCase();
             sendData = capitalizedSentence.getBytes();
+            BasicUDPClient.received += capitalizedSentence.length();
             DatagramPacket sendPacket =
                     new DatagramPacket(sendData, sendData.length, IPAddress, port);
             serverSocket.send(sendPacket);
